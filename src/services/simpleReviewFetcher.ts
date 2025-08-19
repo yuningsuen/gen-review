@@ -67,6 +67,8 @@ export class SimpleReviewFetcher {
         // 将API返回的数据转换为期望的格式
         return {
           reviews: data.reviews || [],
+          rating: 0,
+          user_ratings_total: 0,
         };
       } else {
         const errorMsg = data.error || "Unknown error";
